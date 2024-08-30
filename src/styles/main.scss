@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "adrianna";
+  src: url(https://fonts.gstatic.com/s/worksans/v19/QGYsz_wNahGAdqQ43Rh_fKDp.woff2);
+}
+
+$font-family: "adrianna";
+
+.v-application {
+  font-family: $font-family, sans-serif !important;
+}
