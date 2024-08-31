@@ -65,6 +65,7 @@ export const useAppStore = defineStore("app", {
         ],
       },
     ],
+    cardCount: 6,
   }),
   actions: {
     addColumn() {
@@ -87,10 +88,11 @@ export const useAppStore = defineStore("app", {
         return;
       }
       col.cards.push({
-        id: col.cards.length + 1,
+        id: this.cardCount + 1,
         title: "",
         description: "",
       });
+      this.cardCount++;
     },
     editCard(
       columnId: number,
