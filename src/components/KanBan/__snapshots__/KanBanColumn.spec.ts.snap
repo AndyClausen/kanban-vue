@@ -1,23 +1,47 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`KanBanColumn > renders the component 1`] = `
-"<v-card color="#FFECBE" max-width="344">
-  <v-card-title>To Do</v-card-title>
-  <v-card-text>
-    <v-container>
+"<div class="v-card v-theme--light v-card--density-default v-card--variant-elevated" style="background-color: #FFECBE; color: #000; caret-color: #000; width: 344px;">
+  <!---->
+  <div class="v-card__loader">
+    <div class="v-progress-linear v-theme--light v-locale--is-ltr" style="--v-progress-linear-height: 2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100">
+      <!---->
+      <div class="v-progress-linear__background"></div>
+      <div class="v-progress-linear__buffer" style="width: 0%;"></div>
+      <transition-stub name="fade-transition" appear="false" persisted="false" css="true">
+        <div class="v-progress-linear__indeterminate">
+          <div class="v-progress-linear__indeterminate long"></div>
+          <div class="v-progress-linear__indeterminate short"></div>
+        </div>
+      </transition-stub>
+      <!---->
+    </div>
+  </div>
+  <!---->
+  <!---->
+  <div class="v-card-title">To Do</div>
+  <div class="v-card-text">
+    <div class="v-container v-locale--is-ltr">
       <div>
-        <v-row data-draggable="true">
-          <v-col cols="12">
+        <div class="v-row" data-draggable="true">
+          <div class="v-col v-col-12">
             <kanbancard card="[object Object]"></kanbancard>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12">
-            <v-container class="border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer" width="100%" height="80px"><span class="text-success font-weight-bold text-h2">+</span></v-container>
-          </v-col>
-        </v-row>
+          </div>
+        </div>
+        <div class="v-row" data-draggable="true">
+          <div class="v-col v-col-12">
+            <kanbancard card="[object Object]"></kanbancard>
+          </div>
+        </div>
+        <div class="v-row">
+          <div class="v-col v-col-12">
+            <div class="v-container v-locale--is-ltr border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer" style="height: 80px; width: 100%;"><span class="text-success font-weight-bold text-h2">+</span></div>
+          </div>
+        </div>
       </div>
-    </v-container>
-  </v-card-text>
-</v-card>"
+    </div>
+  </div>
+  <!---->
+  <!----><span class="v-card__underlay"></span>
+</div>"
 `;

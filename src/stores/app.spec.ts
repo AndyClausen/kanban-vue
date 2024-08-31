@@ -18,9 +18,10 @@ describe("AppStore", () => {
   describe("addCard", () => {
     it("adds a card", () => {
       const store = useAppStore();
-      expect(store.columns[0].cards.length).toBe(2);
-      store.addCard(store.columns[0]);
-      expect(store.columns[0].cards.length).toBe(3);
+      const col = store.columns[0];
+      expect(col.cards.length).toBe(2);
+      store.addCard(col.id);
+      expect(col.cards.length).toBe(3);
     });
   });
 });

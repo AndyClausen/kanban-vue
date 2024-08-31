@@ -74,9 +74,13 @@ export const useAppStore = defineStore("app", {
         cards: [],
       });
     },
-    addCard(column: Column) {
-      column.cards.push({
-        id: column.cards.length + 1,
+    addCard(columnId: number) {
+      const col = this.columns.find((column) => column.id === columnId);
+      if (!col) {
+        return;
+      }
+      col.cards.push({
+        id: col.cards.length + 1,
         title: "",
         description: "",
       });

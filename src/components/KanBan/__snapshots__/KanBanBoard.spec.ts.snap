@@ -1,25 +1,44 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`KanBanBoard > renders the component 1`] = `
-"<v-container>
-  <v-card color="#F2B8B4" height="80dvh" class="d-flex flex-column">
-    <v-card-title class="font-weight-bold">Kanban Board</v-card-title>
-    <v-card-text class="flex-grow-1 pb-0">
-      <v-row class="overflow-x-scroll flex-nowrap fill-height">
-        <v-col cols="auto">
+"<div class="v-container v-locale--is-ltr">
+  <div class="v-card v-theme--light v-card--density-default v-card--variant-elevated d-flex flex-column" style="background-color: #F2B8B4; color: #000; caret-color: #000; height: 80dvh;">
+    <!---->
+    <div class="v-card__loader">
+      <div class="v-progress-linear v-theme--light v-locale--is-ltr" style="--v-progress-linear-height: 2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100">
+        <!---->
+        <div class="v-progress-linear__background"></div>
+        <div class="v-progress-linear__buffer" style="width: 0%;"></div>
+        <transition-stub name="fade-transition" appear="false" persisted="false" css="true">
+          <div class="v-progress-linear__indeterminate">
+            <div class="v-progress-linear__indeterminate long"></div>
+            <div class="v-progress-linear__indeterminate short"></div>
+          </div>
+        </transition-stub>
+        <!---->
+      </div>
+    </div>
+    <!---->
+    <!---->
+    <div class="v-card-title font-weight-bold">Kanban Board</div>
+    <div class="v-card-text flex-grow-1 pb-0">
+      <div class="v-row overflow-x-scroll flex-nowrap fill-height">
+        <div class="v-col v-col-auto">
           <kanbancolumn column="[object Object]"></kanbancolumn>
-        </v-col>
-        <v-col cols="auto">
+        </div>
+        <div class="v-col v-col-auto">
           <kanbancolumn column="[object Object]"></kanbancolumn>
-        </v-col>
-        <v-col cols="auto">
+        </div>
+        <div class="v-col v-col-auto">
           <kanbancolumn column="[object Object]"></kanbancolumn>
-        </v-col>
-        <v-col cols="auto">
-          <v-container class="h-50 border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer" width="240px"><span class="text-success font-weight-bold text-h2">+</span></v-container>
-        </v-col>
-      </v-row>
-    </v-card-text>
-  </v-card>
-</v-container>"
+        </div>
+        <div class="v-col v-col-auto">
+          <div class="v-container v-locale--is-ltr h-50 border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer" style="width: 240px;"><span class="text-success font-weight-bold text-h2">+</span></div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <!----><span class="v-card__underlay"></span>
+  </div>
+</div>"
 `;

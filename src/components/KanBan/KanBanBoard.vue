@@ -11,6 +11,7 @@
             <v-container
               class="h-50 border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer"
               width="240px"
+              @click="store.addColumn"
             >
               <span class="text-success font-weight-bold text-h2">+</span>
             </v-container>

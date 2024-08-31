@@ -1,14 +1,11 @@
 <template>
-  <v-card :color="color" max-width="344">
-    <v-card-title>{{ column.title }}</v-card-title>
+  <v-card :color="color" width="344">
+    <v-card-title :class="{ 'font-italic': !column.title }">{{
+      column.title || "Untitled"
+    }}</v-card-title>
     <v-card-text>
       <v-container>
-        <draggable
-          :list="column.cards"
-          itemKey="id"
-          group="cards"
-          @end="onDragEnd"
-        >
+        <draggable :list="column.cards" itemKey="id" group="cards">
           <template #item="{ element: card }">
             <v-row>
               <v-col cols="12">
@@ -23,6 +20,7 @@
                   class="border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer"
                   width="100%"
                   height="80px"
+                  @click="store.addCard(column.id)"
                 >
                   <span class="text-success font-weight-bold text-h2">+</span>
                 </v-container>
@@ -37,13 +35,10 @@
 
 <script setup lang="ts">
 import draggable from "vuedraggable";
-import type { Column } from "@/stores/app";
+import { useAppStore, type Column } from "@/stores/app";
 
 const { column } = defineProps<{ column: Column }>();
+const store = useAppStore();
 
 const color = "#FFECBE";
-
-function onDragEnd(event: DragEvent) {
-  console.log("event", event);
-}
 </script>
