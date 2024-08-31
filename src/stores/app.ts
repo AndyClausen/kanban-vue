@@ -74,6 +74,13 @@ export const useAppStore = defineStore("app", {
         cards: [],
       });
     },
+    editColumnTitle(columnId: number, title: string) {
+      const col = this.columns.find((column) => column.id === columnId);
+      if (!col) {
+        return;
+      }
+      col.title = title;
+    },
     addCard(columnId: number) {
       const col = this.columns.find((column) => column.id === columnId);
       if (!col) {
@@ -84,6 +91,21 @@ export const useAppStore = defineStore("app", {
         title: "",
         description: "",
       });
+    },
+    editCard(
+      columnId: number,
+      cardId: number,
+      updatedProps: Omit<Partial<Card>, "id">
+    ) {
+      const col = this.columns.find((column) => column.id === columnId);
+      if (!col) {
+        return;
+      }
+      const card = col.cards.find((card) => card.id === cardId);
+      if (!card) {
+        return;
+      }
+      Object.assign(card, updatedProps);
     },
   },
 });
