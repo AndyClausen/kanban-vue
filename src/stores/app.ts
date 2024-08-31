@@ -11,7 +11,6 @@ export interface Card {
   id: number;
   title: string;
   description: string;
-  status: string;
 }
 
 export const useAppStore = defineStore("app", {
@@ -25,13 +24,11 @@ export const useAppStore = defineStore("app", {
             id: 1,
             title: "Buy groceries",
             description: "Milk, eggs, bread, and butter",
-            status: "To Do",
           },
           {
             id: 2,
             title: "Pay Rent",
             description: "Monthly rent for a small apartment",
-            status: "To Do",
           },
         ],
       },
@@ -43,13 +40,11 @@ export const useAppStore = defineStore("app", {
             id: 3,
             title: "Clean the house",
             description: "Dust, vacuum, sweep, mop",
-            status: "Doing",
           },
           {
             id: 4,
             title: "Mow the lawn",
             description: "Trim the grass, weed the flowers",
-            status: "Doing",
           },
         ],
       },
@@ -61,16 +56,30 @@ export const useAppStore = defineStore("app", {
             id: 5,
             title: "Prepare for the weekend",
             description: "Pack for the trip, buy tickets",
-            status: "Done",
           },
           {
             id: 6,
             title: "Watch the sunset",
             description: "Relax, unwind, and enjoy the beauty",
-            status: "Done",
           },
         ],
       },
     ],
   }),
+  actions: {
+    addColumn() {
+      this.columns.push({
+        id: this.columns.length + 1,
+        title: "",
+        cards: [],
+      });
+    },
+    addCard(column: Column) {
+      column.cards.push({
+        id: column.cards.length + 1,
+        title: "",
+        description: "",
+      });
+    },
+  },
 });
