@@ -1,15 +1,15 @@
 <template>
   <v-card :color="color" width="344">
-    <v-card-title :class="{ 'font-italic': !column.title }">{{
-      column.title || "Untitled"
-    }}</v-card-title>
+    <v-card-title :class="{ 'font-italic': !title }">
+      <input v-model="title" placeholder="Untitled" />
+    </v-card-title>
     <v-card-text>
       <v-container>
         <draggable :list="column.cards" itemKey="id" group="cards">
           <template #item="{ element: card }">
             <v-row>
               <v-col cols="12">
-                <KanBanCard :card="card" />
+                <KanBanCard :column-id="column.id" :card="card" />
               </v-col>
             </v-row>
           </template>
@@ -39,6 +39,10 @@ import { useAppStore, type Column } from "@/stores/app";
 
 const { column } = defineProps<{ column: Column }>();
 const store = useAppStore();
-
+const title = ref(column.title);
 const color = "#FFECBE";
+
+watch(title, () => {
+  store.editColumnTitle(column.id, title.value);
+});
 </script>

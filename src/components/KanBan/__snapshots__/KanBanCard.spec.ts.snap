@@ -19,8 +19,8 @@ exports[`KanBanCard > renders the component 1`] = `
   </div>
   <!---->
   <!---->
-  <div class="v-card-title">Card 1</div>
-  <div class="v-card-text">Description 1</div>
+  <div class="v-card-title"><input placeholder="Untitled"></div>
+  <div class="v-card-text"><textarea class="w-100 pa-1" placeholder="No description"></textarea></div>
   <!---->
   <!----><span class="v-card__underlay"></span>
 </div>"

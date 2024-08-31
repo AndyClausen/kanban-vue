@@ -19,18 +19,18 @@ exports[`KanBanColumn > renders the component 1`] = `
   </div>
   <!---->
   <!---->
-  <div class="v-card-title">To Do</div>
+  <div class="v-card-title"><input placeholder="Untitled"></div>
   <div class="v-card-text">
     <div class="v-container v-locale--is-ltr">
       <div>
         <div class="v-row" data-draggable="true">
           <div class="v-col v-col-12">
-            <kanbancard card="[object Object]"></kanbancard>
+            <kanbancard column-id="1" card="[object Object]"></kanbancard>
           </div>
         </div>
         <div class="v-row" data-draggable="true">
           <div class="v-col v-col-12">
-            <kanbancard card="[object Object]"></kanbancard>
+            <kanbancard column-id="1" card="[object Object]"></kanbancard>
           </div>
         </div>
         <div class="v-row">
