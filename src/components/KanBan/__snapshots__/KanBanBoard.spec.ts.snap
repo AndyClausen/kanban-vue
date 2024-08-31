@@ -21,8 +21,8 @@ exports[`KanBanBoard > renders the component 1`] = `
     <!---->
     <!---->
     <div class="v-card-title font-weight-bold">Kanban Board</div>
-    <div class="v-card-text flex-grow-1 pb-0">
-      <div class="v-row overflow-x-scroll flex-nowrap fill-height">
+    <div class="v-card-text flex-grow-1 overflow-scroll py-2">
+      <div class="v-row flex-nowrap">
         <div class="v-col v-col-auto">
           <kanbancolumn column="[object Object]"></kanbancolumn>
         </div>
