@@ -29,4 +29,10 @@ describe("KanBanColumn", () => {
     await wrapper.get(".v-container.cursor-pointer").trigger("click");
     expect(wrapper.findAll("KanBanCard").length).toBe(3);
   });
+  it("updates the column title", async () => {
+    expect(wrapper.find("input").element.value).toBe("To Do");
+    await wrapper.find("input").setValue("New Title");
+    expect(wrapper.find("input").element.value).toBe("New Title");
+    expect(store.columns[0].title).toBe("New Title");
+  });
 });
