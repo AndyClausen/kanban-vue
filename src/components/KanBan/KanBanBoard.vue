@@ -2,8 +2,8 @@
   <v-container>
     <v-card :color="color" height="80dvh" class="d-flex flex-column">
       <v-card-title class="font-weight-bold">Kanban Board</v-card-title>
-      <v-card-text class="flex-grow-1 pb-0">
-        <v-row class="overflow-x-scroll flex-nowrap fill-height">
+      <v-card-text class="flex-grow-1 overflow-scroll py-2">
+        <v-row class="flex-nowrap">
           <v-col v-for="column in columns" :key="column.id" cols="auto">
             <KanBanColumn :column="column" />
           </v-col>
