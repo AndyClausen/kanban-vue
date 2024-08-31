@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`KanBanCard > renders the component 1`] = `
+"<v-card class="mx-auto" max-width="344">
+  <v-card-title>Card 1</v-card-title>
+  <v-card-text>Description 1</v-card-text>
+</v-card>"
+`;

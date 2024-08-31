@@ -6,7 +6,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
-    "test": "vitest -dom"
+    "test": "vitest --dom"
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@babel/types": "^7.24.7",
+    "@pinia/testing": "^0.1.5",
     "@types/node": "^20.14.10",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-typescript": "^13.0.0",

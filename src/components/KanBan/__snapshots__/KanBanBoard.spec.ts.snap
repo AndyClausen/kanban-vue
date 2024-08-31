@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`KanBanBoard > renders the component 1`] = `
+"<v-container>
+  <v-card color="#F2B8B4" height="80dvh" class="d-flex flex-column">
+    <v-card-title class="font-weight-bold">Kanban Board</v-card-title>
+    <v-card-text class="flex-grow-1 pb-0">
+      <v-row class="overflow-x-scroll flex-nowrap fill-height">
+        <v-col cols="auto">
+          <kanbancolumn column="[object Object]"></kanbancolumn>
+        </v-col>
+        <v-col cols="auto">
+          <kanbancolumn column="[object Object]"></kanbancolumn>
+        </v-col>
+        <v-col cols="auto">
+          <kanbancolumn column="[object Object]"></kanbancolumn>
+        </v-col>
+        <v-col cols="auto">
+          <v-container class="h-50 border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer" width="240px"><span class="text-success font-weight-bold text-h2">+</span></v-container>
+        </v-col>
+      </v-row>
+    </v-card-text>
+  </v-card>
+</v-container>"
+`;

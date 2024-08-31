@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`KanBanColumn > renders the component 1`] = `
+"<v-card color="#FFECBE" max-width="344">
+  <v-card-title>To Do</v-card-title>
+  <v-card-text>
+    <v-container>
+      <div>
+        <v-row data-draggable="true">
+          <v-col cols="12">
+            <kanbancard card="[object Object]"></kanbancard>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12">
+            <v-container class="border-lg rounded-lg border-success d-flex justify-center align-center cursor-pointer" width="100%" height="80px"><span class="text-success font-weight-bold text-h2">+</span></v-container>
+          </v-col>
+        </v-row>
+      </div>
+    </v-container>
+  </v-card-text>
+</v-card>"
+`;
